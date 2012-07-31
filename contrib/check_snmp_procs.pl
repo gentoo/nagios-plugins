@@ -35,7 +35,7 @@
 #use strict;
 use Getopt::Long;
 use Net::SNMP qw (oid_lex_sort oid_base_match SNMP_VERSION_1);
-use lib "/usr/local/nagios/libexec";
+use lib "/usr/lib/nagios/plugins";
 use utils qw(%ERRORS &print_revision &support &usage);
 
 my $PROGNAME="check_snmp_procs";

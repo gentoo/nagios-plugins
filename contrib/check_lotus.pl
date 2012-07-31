@@ -17,7 +17,7 @@ use Getopt::Long ;
 
 my ($timeout, $debug, $lotus_host, $server, $indiv_dn, $packet_debug) ;
 
-use lib qw(/usr/local/nagios/libexec) ;
+use lib qw(/usr/lib/nagios/plugins) ;
 use utils qw($TIMEOUT %ERRORS &print_revision &support &usage) ;
 use packet_utils qw(pdump &tethereal) ;
 

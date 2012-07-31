@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -w
+#!/usr/bin/perl -w
 
 use strict;
 $|++;
@@ -12,7 +12,7 @@ use DBI;
 
 my $driver = "mysql";
 
-my $CFG_DEF = "/opt/nagios/etc/cgi.cfg";
+my $CFG_DEF = "/etc/nagios/cgi.cfg";
 my $QUERY = "select *, UNIX_TIMESTAMP(last_update) as ut from programstatus;";
 my $EXPIRE_DEF = 5; ## expressed in minutes
 my $PROCCNT = 0;

@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -w
+#!/usr/bin/perl -w
 
 # (c)2004 John Koyle, RFP Depot, LLC.
 # This is free software use it however you would like.
@@ -6,7 +6,7 @@
 use strict;
 use DBI;
 use Getopt::Long 2.16;
-use lib "/usr/local/nagios/libexec";
+use lib "/usr/lib/nagios/plugins";
 use utils qw(%ERRORS);
 
 

@@ -54,7 +54,7 @@ from getopt import getopt
 import utils
 
 # Where temp files should be placed
-tempfile.tempdir='/usr/local/nagios/var'
+tempfile.tempdir='/var/nagios'
 
 # Base name for tempfile
 tempfile.template='check_nmap_tmp.'

@@ -52,7 +52,7 @@ sub version ();
 
 delete @ENV{'PATH', 'IFS', 'CDPATH', 'ENV', 'BASH_ENV'};
 
-use constant SMBCLIENT_PATH	=> '/usr/local/samba/bin/smbclient' ;
+use constant SMBCLIENT_PATH	=> '/usr/bin/smbclient' ;
 use constant MAX_QUEUES_TO_CHECK => 20 ;		# So that the check doesn't take longer than $TIMEOUT
 
 use constant SMBCLIENT_SVC	=> sub { return `${\SMBCLIENT_PATH} -L //$_[0] -U $_[1]%$_[2]` } ;

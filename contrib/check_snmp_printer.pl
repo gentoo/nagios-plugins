@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -w
+#!/usr/bin/perl -w
 
 # check_snmp_printer - check for printer status via snmp
 #  Supports both standard PRINT-MIB (RFC-1759) and HP Enterprise print-mib

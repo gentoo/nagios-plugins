@@ -7,7 +7,7 @@
 #
 use POSIX qw(strtol);
 
-my $command_file = '/usr/local/nagios/var/rw/nagios.cmd';
+my $command_file = '/var/nagios/rw/nagios.cmd';
 
 my $hour = (60*60);
 my $next_day = (24*60*60);

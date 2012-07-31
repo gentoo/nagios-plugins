@@ -12,7 +12,7 @@ use IO::Socket;
 use IO::Select;
 use Getopt::Long ;
 
-use lib qw(/usr/local/nagios/libexec) ;
+use lib qw(/usr/lib/nagios/plugins) ;
 use utils qw(%ERRORS &print_revision &support &usage);
 use packet_utils qw(&pdump &tethereal) ;
 

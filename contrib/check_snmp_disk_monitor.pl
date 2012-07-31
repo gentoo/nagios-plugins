@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/bin/perl
 # author: Al Tobey <albert.tobey@priority-health.com>
 # what:    monitor diskspace using the host-resources mib
 # license: GPL - http://www.fsf.org/licenses/gpl.txt
@@ -7,7 +7,7 @@
 
 use strict;
 require 5.6.0;
-use lib qw( /opt/nagios/libexec );
+use lib qw( /usr/lib/nagios/plugins );
 use utils qw(%ERRORS $TIMEOUT &print_revision &support &usage);
 use SNMP 5.0;
 use Getopt::Long;

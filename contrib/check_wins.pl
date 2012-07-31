@@ -17,7 +17,7 @@ use strict ;
 use Getopt::Long ;
 use vars qw($opt_H $opt_D $opt_W $opt_T $debug @my_dcs);
 
-use lib '/usr/local/nagios/libexec/' ;
+use lib '/usr/lib/nagios/plugins/' ;
 use utils qw($TIMEOUT %ERRORS &print_revision &support &usage);
 
 my $PROGNAME = 'check_wins' ;

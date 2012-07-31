@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/bin/perl
 # author: Al Tobey <albert.tobey@priority-health.com>
 # what:   monitor a process using the host-resources mib
 # license: GPL - http://www.fsf.org/licenses/gpl.txt
@@ -15,7 +15,7 @@
 
 use strict;
 require 5.6.0;
-use lib qw( /opt/nagios/libexec /usr/local/libexec );
+use lib qw( /usr/lib/nagios/plugins );
 use utils qw(%ERRORS $TIMEOUT &print_revision &support &usage);
 use SNMP 5.0;
 use Getopt::Long;
@@ -37,7 +37,7 @@ $opt_nocache   = undef;
 $cache_exp     = 600;
 $exit          = $ERRORS{OK};
 $interpreters  = '(perl|/bin/sh|/usr/bin/sh|/bin/bash|/bin/ksh|python)';
-our $cachefile = '/var/opt/nagios/tmp/'; # completed later
+our $cachefile = '/var/nagios/tmp/'; # completed later
 our %processes = ();
 
 sub process_options {

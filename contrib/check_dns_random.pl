@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 # ------------------------------------------------------------------------------
 # File Name:            check_dns_random.pl
 # Author:               Richard Mayhew - South Africa
@@ -33,9 +33,9 @@ $|=1;
 
 my $host = shift || &usage;
 
-my $domainfile = "/usr/local/nagios/etc/domains.list";
+my $domainfile = "/etc/domains.list";
 my $wc = `/usr/bin/wc -l $domainfile`;
-my $check = "/usr/local/nagios/libexec/check_dns";
+my $check = "/usr/lib/nagios/plugins/check_dns";
 my $x = 0;
 my $srv_file = "";
 my $z = "";
@@ -49,8 +49,7 @@ open(DOMAIN,"<$domainfile") or die "Error Opening $domainfile File!\n";
                 my @data = split(/\n/,$srv_file);
 
 chomp $wc;
-$wc =~ s/ //g;
-$wc =~ s/domains//g;
+$wc =~ s/([[:digit:]]+) .*/$1/g;
 
 $x = rand $wc;
 ($z,$y) = split(/\./,$x);

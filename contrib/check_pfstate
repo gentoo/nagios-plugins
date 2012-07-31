@@ -3,7 +3,7 @@
 use strict;
 use Getopt::Long;
 use vars qw($opt_V $opt_h $opt_P $opt_H $opt_w $opt_c $PROGNAME);
-use lib "/usr/local/nagios/libexec"  ;
+use lib "/usr/lib/nagios/plugins"  ;
 use utils qw(%ERRORS &print_revision &support &usage);
 
 my $remote_user = "root";

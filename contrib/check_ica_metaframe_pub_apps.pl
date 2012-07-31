@@ -17,7 +17,7 @@ use Getopt::Long ;
 
 my ($bcast_addr, $timeout, $debug, @citrix_servers, $crit_pub_apps, $warn_pub_apps, $long_list) ;
 
-use lib qw(/usr/local/nagios/libexec) ;
+use lib qw(/usr/lib/nagios/plugins) ;
 use utils qw(%ERRORS &print_revision &support &usage) ;
 use packet_utils qw(&pdump &tethereal) ;
 

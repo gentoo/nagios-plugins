@@ -15,7 +15,7 @@
 use strict;
 use Getopt::Long;
 use vars qw($opt_V $opt_h $opt_w $opt_c $opt_f $verbose $PROGNAME);
-use lib "/usr/local/libexec/nagios" ;
+use lib "/usr/lib/nagios/plugins" ;
 use utils qw($TIMEOUT %ERRORS &print_revision &support);
 
 my $df = "/bin/df";
