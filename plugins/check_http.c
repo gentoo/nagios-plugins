@@ -306,7 +306,7 @@ process_arguments (int argc, char **argv)
     case 'S': /* use SSL */
 #ifndef HAVE_SSL
       usage4 (_("Invalid option - SSL is not available"));
-#endif
+#else
       use_ssl = TRUE;
       if (optarg == NULL || c != 'S')
         ssl_version = 0;
@@ -317,6 +317,7 @@ process_arguments (int argc, char **argv)
       }
       if (specify_port == FALSE)
         server_port = HTTPS_PORT;
+#endif
       break;
     case SNI_OPTION:
       use_sni = TRUE;
